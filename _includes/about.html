@@ -1,0 +1,15 @@
+{%- assign about = site.data.content.about -%}
+<section class="bg-primary" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">{{ about.heading }}</h2>
+                <hr class="light">
+                {%- for p in about.paragraphs %}
+                <p class="text-faded">{{ p }}</p>
+                {%- endfor %}
+                <a href="#contact" class="btn btn-default btn-xl page-scroll">{{ about.button }}</a>
+            </div>
+        </div>
+    </div>
+</section>

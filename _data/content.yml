@@ -1,0 +1,35 @@
+# Marketing-Texte der Startseite. Hier bearbeiten – kein HTML nötig.
+
+hero:
+  heading: Unvergessliche Momente, mit Herz geplant
+  text: >-
+    Von der Traumhochzeit über das stilvolle Firmenevent bis zur einfühlsamen
+    Rede – ich begleite Sie an den wichtigsten Tagen Ihres Lebens. Persönlich,
+    verlässlich und mit Liebe zum Detail.
+  button: Mehr erfahren
+
+about:
+  heading: Über mich
+  paragraphs:
+    - >-
+      Mein Name ist Valentina Krauß. Seit über zehn Jahren gestalte ich
+      Hochzeiten und Events, die genau zu den Menschen passen, die sie feiern.
+      Als ausgebildete Rednerin finde ich außerdem die richtigen Worte – für die
+      schönsten und für die schwersten Stunden des Lebens.
+    - >-
+      Ob ausgelassene Feier oder stiller Abschied: Ich höre zu, plane
+      vorausschauend und sorge dafür, dass Sie Ihren Tag einfach genießen
+      können. Alles Weitere übernehme ich.
+  button: Kennenlernen
+
+cta:
+  heading: Planen wir Ihren besonderen Moment gemeinsam
+  button: Jetzt Kontakt aufnehmen
+
+contact:
+  heading: Kontakt
+  text: >-
+    Sie planen eine Hochzeit, ein Event oder wünschen sich eine persönliche
+    Rede? Schreiben Sie mir oder rufen Sie an – in einem unverbindlichen
+    Gespräch lernen wir uns kennen und ich melde mich so schnell wie möglich
+    bei Ihnen zurück.

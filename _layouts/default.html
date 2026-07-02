@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+
+{% include head.html %}
+
+<body id="page-top"{% unless page.layout == 'front' %} class="subpage"{% endunless %}>
+  {% include nav.html %}
+  {{ content }}
+  {% include scripts.html %}
+</body>
+
+</html>

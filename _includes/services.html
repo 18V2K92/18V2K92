@@ -9,34 +9,15 @@
     </div>
     <div class="container">
         <div class="row">
+            {%- for service in site.data.services %}
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
-                    <i class="fa fa-4x fa-heart wow bounceIn text-primary"></i>
-                    <h3>Hochzeitsplanung</h3>
-                    <p class="text-muted">Von der ersten Idee bis zum letzten Tanz – ich plane und koordiniere Ihren großen Tag, damit Sie ihn unbeschwert genießen können.</p>
+                    <i class="fa fa-4x {{ service.icon }} wow bounceIn text-primary"{% unless forloop.first %} data-wow-delay=".{{ forloop.index0 }}s"{% endunless %}></i>
+                    <h3>{{ service.title }}</h3>
+                    <p class="text-muted">{{ service.text }}</p>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-glass wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                    <h3>Eventplanung</h3>
-                    <p class="text-muted">Firmenfeier, Jubiläum oder privater Anlass: Ich organisiere Veranstaltungen mit klarer Struktur, kreativem Konzept und dem gewissen Etwas.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-microphone wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                    <h3>Hochzeitsreden</h3>
-                    <p class="text-muted">Persönliche, humorvolle und berührende Worte für Ihre Trauung – frei gehalten oder als fertiger Text für Sie zum Vortragen.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-leaf wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                    <h3>Trauerreden</h3>
-                    <p class="text-muted">Ein würdevoller Abschied in Ihren Worten. Einfühlsam gestaltete Trauerreden, die dem Leben eines geliebten Menschen gerecht werden.</p>
-                </div>
-            </div>
+            {%- endfor %}
         </div>
     </div>
 </section>

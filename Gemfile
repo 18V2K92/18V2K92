@@ -4,6 +4,19 @@ source "https://rubygems.org"
 # Run the site locally with:  bundle exec jekyll serve
 gem "jekyll", "~> 4.3"
 
+# Modern Jekyll plugins
+group :jekyll_plugins do
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+end
+
+# Ruby 3.4 removed several gems from the default set; declare them so the
+# site builds on both Ruby 3.1 (CI) and Ruby 3.4+ (local dev).
+gem "bigdecimal"
+gem "csv"
+gem "base64"
+gem "logger"
+
 # Windows and JRuby do not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
 platforms :mingw, :x64_mingw, :mswin, :jruby do

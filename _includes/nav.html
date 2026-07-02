@@ -1,3 +1,7 @@
+{%- assign on_front = false -%}
+{%- if page.layout == 'front' -%}{%- assign on_front = true -%}{%- endif -%}
+{%- assign home = '/' | relative_url -%}
+{%- assign links = "about,Über mich|services,Leistungen|portfolio,Referenzen|contact,Kontakt" | split: "|" -%}
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -8,24 +12,22 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">Valentina Krauß</a>
+            <a class="navbar-brand{% if on_front %} page-scroll{% endif %}" href="{% if on_front %}#page-top{% else %}{{ home }}{% endif %}">Valentina Krauß</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
+                {%- for link in links -%}
+                {%- assign parts = link | split: "," -%}
                 <li>
-                    <a class="page-scroll" href="#about">Über mich</a>
+                    {% if on_front -%}
+                    <a class="page-scroll" href="#{{ parts[0] }}">{{ parts[1] }}</a>
+                    {%- else -%}
+                    <a href="{{ home }}#{{ parts[0] }}">{{ parts[1] }}</a>
+                    {%- endif %}
                 </li>
-                <li>
-                    <a class="page-scroll" href="#services">Leistungen</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#portfolio">Referenzen</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Kontakt</a>
-                </li>
+                {%- endfor -%}
             </ul>
         </div>
         <!-- /.navbar-collapse -->

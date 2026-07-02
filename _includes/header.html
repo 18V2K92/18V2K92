@@ -1,10 +1,11 @@
+{%- assign hero = site.data.content.hero -%}
 <header>
     <div class="header-content">
         <div class="header-content-inner">
-            <h1>Unvergessliche Momente, mit Herz geplant</h1>
+            <h1>{{ hero.heading }}</h1>
             <hr>
-            <p>Von der Traumhochzeit über das stilvolle Firmenevent bis zur einfühlsamen Rede – ich begleite Sie an den wichtigsten Tagen Ihres Lebens. Persönlich, verlässlich und mit Liebe zum Detail.</p>
-            <a href="#about" class="btn btn-primary btn-xl page-scroll">Mehr erfahren</a>
+            <p>{{ hero.text }}</p>
+            <a href="#about" class="btn btn-primary btn-xl page-scroll">{{ hero.button }}</a>
         </div>
     </div>
 </header>

@@ -1,96 +1,24 @@
+{%- assign projects = site.portfolio | sort: "order" -%}
 <section class="no-padding" id="portfolio">
     <div class="container-fluid">
         <div class="row no-gutter">
+            {%- for project in projects %}
             <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="img/portfolio/1.jpg" class="img-responsive" alt="Freie Trauung im Weingut">
+                <a href="{{ project.url | relative_url }}" class="portfolio-box">
+                    <img src="{{ project.image | relative_url }}" class="img-responsive" alt="{{ project.title }}">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
-                                Hochzeit
+                                {{ project.category }}
                             </div>
                             <div class="project-name">
-                                Freie Trauung im Weingut
+                                {{ project.title }}
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="img/portfolio/2.jpg" class="img-responsive" alt="Sommerhochzeit am See">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Hochzeit
-                            </div>
-                            <div class="project-name">
-                                Sommerhochzeit am See
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="img/portfolio/3.jpg" class="img-responsive" alt="Firmenjubiläum 25 Jahre">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Firmenevent
-                            </div>
-                            <div class="project-name">
-                                Firmenjubiläum – 25 Jahre
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="img/portfolio/4.jpg" class="img-responsive" alt="Hochzeitsrede des Trauzeugen">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Hochzeitsrede
-                            </div>
-                            <div class="project-name">
-                                Worte für Anna & Jonas
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="img/portfolio/5.jpg" class="img-responsive" alt="Trauerfeier in stiller Runde">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Trauerrede
-                            </div>
-                            <div class="project-name">
-                                Abschied in Würde
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="img/portfolio/6.jpg" class="img-responsive" alt="Runder Geburtstag im Gartenhaus">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Event
-                            </div>
-                            <div class="project-name">
-                                Geburtstag im Gartenhaus
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            {%- endfor %}
         </div>
     </div>
 </section>

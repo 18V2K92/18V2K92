@@ -349,3 +349,38 @@ body {
     -webkit-tap-highlight-color: $theme-dark;
 }
 
+// Subpages (portfolio detail pages, generic pages, 404)
+// Give the fixed navbar a solid, readable background since there is no
+// dark hero behind it, and push content below the navbar.
+.subpage-section {
+    padding-top: 130px;
+    padding-bottom: 80px;
+}
+
+body.subpage {
+    #mainNav {
+        background-color: white;
+        border-color: rgba($theme-dark, .5);
+        .navbar-brand {
+            color: $theme-primary;
+            &:hover,
+            &:focus {
+                color: darken($theme-primary, 10%);
+            }
+        }
+        .nav > li > a,
+        .nav > li > a:focus {
+            color: $theme-dark;
+            &:hover {
+                color: $theme-primary;
+            }
+        }
+    }
+    .project-category {
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+}
+
