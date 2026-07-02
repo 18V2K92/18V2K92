@@ -1,0 +1,29 @@
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Kontakt</h2>
+                <hr class="primary">
+                <p>Sie planen eine Hochzeit, ein Event oder wünschen sich eine persönliche Rede? Schreiben Sie mir oder rufen Sie an – in einem unverbindlichen Gespräch lernen wir uns kennen und ich melde mich so schnell wie möglich bei Ihnen zurück.</p>
+            </div>
+        <div class="col-lg-2 col-lg-offset-2 text-center">
+            <a href="https://www.instagram.com/{{ site.instagram_username }}">
+                <i class="fa fa-instagram fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                <p>@{{ site.instagram_username }}</p>
+            </a>
+        </div>
+        <div class="col-lg-2 col-lg-offset-1 text-center">
+            <a href="mailto:{{ site.email }}">
+            <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                <p>{{ site.email }}</p>
+            </a>
+        </div>
+        <div class="col-lg-2 col-lg-offset-1 text-center">
+            <a href="tel:{{ site.phone | remove: ' ' }}">
+            <i class="fa fa-phone fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                <p>{{ site.phone }}</p>
+            </a>
+        </div>
+
+    </div>
+</section>
