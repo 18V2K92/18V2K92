@@ -33,8 +33,12 @@
 //     }
 // }
 
-// variables.less
-$theme-primary: #F05F40;
+// Theme colors
+// $theme-primary is used for buttons, links, the nav accents, the "Über mich"
+// section background, and the portfolio hover overlay — all with WHITE text on
+// top — so it needs to stay deep enough to keep that text readable.
+// Soft pastel jade green:
+$theme-primary: #4FAE93;
 $theme-dark: #222;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
