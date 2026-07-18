@@ -1,7 +1,7 @@
 # Site settings
 title: Valentina Krauß
 tagline: Hochzeits- und Eventplanung · Hochzeits- und Trauerreden
-email: kontakt@valentina-krauss.de
+email: valentina.krauss@outlook.de
 description: >- # this means to ignore newlines until "baseurl:"
   Valentina Krauß – Hochzeits- und Eventplanung sowie einfühlsame
   Hochzeits- und Trauerreden. Für Momente, die in Erinnerung bleiben.
@@ -10,7 +10,7 @@ baseurl: "" # set by the GitHub Pages build (--baseurl); leave empty here
 url: "" # e.g. https://valentina-krauss.de
 
 # Kontakt & Social
-phone: "+49 170 1234567"
+phone: "+49 176 84519457"
 instagram_username: valentina.krauss.events
 
 # Build settings
